@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-wesbos",
-  "version": "0.0.19",
-  "description": "ESLint and Prettier Config from Wes Bos",
+  "name": "eslint-config-contreras",
+  "version": "0.0.1",
+  "description": "ESLint and Prettier Config from Luis Contreras",
   "keywords": [
     "javascript",
     "ecmascript",
@@ -11,8 +11,8 @@
     "prettier"
   ],
   "main": "index.js",
-  "repository": "git@github.com:wesbos/eslint-config-wesbos.git",
-  "author": "Wes bos <wes@wesbos.com>",
+  "repository": "git@github.com:devrasec/eslint-config-contreras.git",
+  "author": "Luis Contreras <one.tmac@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "babel-eslint": "^9.0.0",
