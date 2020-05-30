@@ -20,21 +20,19 @@ module.exports = {
     "jest": true
   },
   "rules": {
-    "no-debugger": 0,
-    "no-alert": 0,
-    "no-await-in-loop": 0,
+    "no-alert": "warn",
     "no-return-assign": [
       "error",
       "except-parens"
     ],
     "no-restricted-syntax": [
-      2,
+      "error",
       "ForInStatement",
       "LabeledStatement",
       "WithStatement"
     ],
     "no-unused-vars": [
-      1,
+      "warn",
       {
         "ignoreSiblings": true,
         "argsIgnorePattern": "res|next|^err"
@@ -47,41 +45,41 @@ module.exports = {
       }
     ],
     "arrow-body-style": [
-      2,
+      "error",
       "as-needed"
     ],
     "no-unused-expressions": [
-      2,
+      "error",
       {
         "allowTaggedTemplates": true
       }
     ],
     "no-param-reassign": [
-      2,
+      "error",
       {
         "props": false
       }
     ],
-    "no-console": 0,
-    "import/prefer-default-export": 0,
-    "import": 0,
-    "func-names": 0,
-    "space-before-function-paren": 0,
-    "comma-dangle": 0,
-    "max-len": 0,
-    "import/extensions": 0,
-    "no-underscore-dangle": 0,
-    "consistent-return": 0,
-    "react/display-name": 1,
-    "react/no-array-index-key": 0,
-    "react/react-in-jsx-scope": 0,
-    "react/prefer-stateless-function": 0,
-    "react/forbid-prop-types": 0,
-    "react/no-unescaped-entities": 0,
-    "jsx-a11y/accessible-emoji": 0,
-    "react/require-default-props": 0,
+    "no-console": "warn",
+    "import/prefer-default-export": "off",
+    "import": "off",
+    "func-names": ["error", "as-needed"],
+    "space-before-function-paren": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "max-len": "off",
+    "import/extensions": "off",
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "react/display-name": "warn",
+    "react/no-array-index-key": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prefer-stateless-function": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "jsx-a11y/accessible-emoji": "off",
+    "react/require-default-props": "off",
     "react/jsx-filename-extension": [
-      1,
+      "warn",
       {
         "extensions": [
           ".js",
@@ -89,9 +87,9 @@ module.exports = {
         ]
       }
     ],
-    "radix": 0,
+    "radix": "off",
     "no-shadow": [
-      2,
+      "error",
       {
         "hoist": "all",
         "allow": [
@@ -105,7 +103,7 @@ module.exports = {
       }
     ],
     "quotes": [
-      2,
+      "error",
       "single",
       {
         "avoidEscape": true,
