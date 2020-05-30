@@ -64,7 +64,7 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import": "off",
     "func-names": ["error", "as-needed"],
-    "space-before-function-paren": ["error", "always"],
+    "space-before-function-paren": "off",
     "comma-dangle": ["error", "always-multiline"],
     "max-len": "off",
     "import/extensions": "off",
