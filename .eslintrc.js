@@ -65,7 +65,16 @@ module.exports = {
     "import": "off",
     "func-names": ["error", "as-needed"],
     "space-before-function-paren": "off",
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
     "max-len": "off",
     "import/extensions": "off",
     "no-underscore-dangle": "off",
@@ -115,7 +124,7 @@ module.exports = {
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 80,
+        "printWidth": 100,
       }
     ],
     "jsx-a11y/href-no-hash": "off",
