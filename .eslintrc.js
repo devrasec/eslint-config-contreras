@@ -34,7 +34,7 @@ module.exports = {
     "no-unused-vars": [
       "warn",
       {
-        "ignoreSiblings": true,
+        "ignoreRestSiblings": true,
         "argsIgnorePattern": "res|next|^err"
       }
     ],
