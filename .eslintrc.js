@@ -1,146 +1,109 @@
 module.exports = {
-  "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react"
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react-hooks/recommended',
+    'prettier',
+    'prettier/react',
   ],
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    // Can I remove these now?
-    "ecmaFeatures": {
-      "impliedStrict": true,
-      "classes": true
-    }
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  "env": {
-    "browser": true,
-    "node": true,
-    "jquery": true,
-    "jest": true
+  env: {
+    browser: true,
+    node: true,
+    jquery: true,
+    jest: true,
   },
-  "rules": {
-    "no-alert": "warn",
-    "no-return-assign": [
-      "error",
-      "except-parens"
+  rules: {
+    'no-alert': 'warn',
+    'no-return-assign': ['error', 'except-parens'],
+    'no-restricted-syntax': [
+      'error',
+      'ForInStatement',
+      'LabeledStatement',
+      'WithStatement',
     ],
-    "no-restricted-syntax": [
-      "error",
-      "ForInStatement",
-      "LabeledStatement",
-      "WithStatement"
-    ],
-    "no-unused-vars": [
-      "warn",
+    'no-unused-vars': [
+      'warn',
       {
-        "ignoreRestSiblings": true,
-        "argsIgnorePattern": "res|next|^err"
-      }
+        ignoreRestSiblings: true,
+        argsIgnorePattern: 'res|next|^err',
+      },
     ],
-    "prefer-const": [
-      "error",
+    'prefer-const': [
+      'error',
       {
-        "destructuring": "all",
-      }
+        destructuring: 'all',
+      },
     ],
-    "arrow-body-style": [
-      "error",
-      "as-needed"
-    ],
-    "no-unused-expressions": [
-      "error",
+    'arrow-body-style': ['error', 'as-needed'],
+    'no-unused-expressions': [
+      'error',
       {
-        "allowTaggedTemplates": true
-      }
+        allowTaggedTemplates: true,
+      },
     ],
-    "no-param-reassign": [
-      "error",
+    'no-param-reassign': [
+      'error',
       {
-        "props": false
-      }
+        props: false,
+      },
     ],
-    "no-console": "warn",
-    "import/prefer-default-export": "off",
-    "import": "off",
-    "func-names": ["error", "as-needed"],
-    "space-before-function-paren": "off",
-    "comma-dangle": [
-      "error",
+    'no-console': 'warn',
+    'import/prefer-default-export': 'off',
+    import: 'off',
+    'func-names': ['error', 'as-needed'],
+    'space-before-function-paren': 'off',
+    'comma-dangle': [
+      'error',
       {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "always-multiline",
-        "functions": "never"
-      }
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'never',
+      },
     ],
-    "max-len": "off",
-    "import/extensions": "off",
-    "no-underscore-dangle": "off",
-    "consistent-return": "off",
-    "react/display-name": "warn",
-    "react/no-array-index-key": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/prefer-stateless-function": "off",
-    "react/forbid-prop-types": "off",
-    "react/no-unescaped-entities": "off",
-    "jsx-a11y/accessible-emoji": "off",
-    "react/require-default-props": "off",
-    "react/jsx-filename-extension": [
-      "warn",
+    'max-len': 'off',
+    'import/extensions': 'off',
+    'no-underscore-dangle': 'off',
+    'consistent-return': 'off',
+    'react/no-array-index-key': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/prefer-stateless-function': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/no-unescaped-entities': 'off',
+    'jsx-a11y/accessible-emoji': 'off',
+    'react/require-default-props': 'off',
+    radix: 'off',
+    'no-shadow': [
+      'error',
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
-      }
+        hoist: 'all',
+        allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
+      },
     ],
-    "radix": "off",
-    "no-shadow": [
-      "error",
+    quotes: [
+      'error',
+      'single',
       {
-        "hoist": "all",
-        "allow": [
-          "resolve",
-          "reject",
-          "done",
-          "next",
-          "err",
-          "error"
-        ]
-      }
+        avoidEscape: true,
+        allowTemplateLiterals: false,
+      },
     ],
-    "quotes": [
-      "error",
-      "single",
-      {
-        "avoidEscape": true,
-        "allowTemplateLiterals": true
-      }
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 100,
-      }
-    ],
-    "jsx-a11y/href-no-hash": "off",
-    "jsx-a11y/anchor-is-valid": [
-      "warn",
-      {
-        "aspects": [
-          "invalidHref"
-        ]
-      }
-    ],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    'jsx-a11y/href-no-hash': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    semi: [1, 'always'],
   },
-  "plugins": [
-    "html",
-    "react-hooks"
-  ]
-}
+  plugins: ['html'],
+};
