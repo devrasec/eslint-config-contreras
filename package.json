@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-contreras",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ESLint and Prettier Config from Luis Contreras",
   "keywords": [
     "javascript",
