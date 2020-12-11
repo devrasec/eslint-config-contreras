@@ -11,7 +11,6 @@ module.exports = {
   ],
   parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 2020,
     sourceType: 'module',
     requireConfigFile: false,
     ecmaFeatures: {
@@ -28,6 +27,7 @@ module.exports = {
     node: true,
     jquery: true,
     jest: true,
+    es2020: true,
   },
   rules: {
     'no-alert': 'warn',
