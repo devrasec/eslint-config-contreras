@@ -18,6 +18,11 @@ module.exports = {
       jsx: true,
     },
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   env: {
     browser: true,
     node: true,
@@ -102,6 +107,17 @@ module.exports = {
       },
     ],
     'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        'aspects': ['invalidHref', 'preferButton'],
+      },
+    ],
+    'jsx-a11y/no-autofocus': [
+      'error', {
+        'ignoreNonDOM': true,
+      },
+    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     semi: [1, 'always'],
